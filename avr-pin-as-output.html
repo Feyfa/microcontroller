@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Microcontroller Tailwind</title>
+
+    <!-- link output css -->
+    <link rel="stylesheet" href="public/css/output.css">
+    <!-- link output css -->
+
+    <!-- link font family google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- link font family google -->
+
+
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link font awesome -->
+    
+</head>
+<body class="bg-[rgb(250,250,250)] font-inter text-[rgb(10,10,10)] w-full overflow-x-hidden">
+
+    <main class="relative lg:flex">
+
+        <!-- sidebar -->
+        <div class="sidebar pt-10 pb-5 bg-[rgb(239,242,248)] max-h-[80vh] overflow-auto border-r border-b border-r-slate-300 border-b-slate-300 shadow font-bold text-[#222] text-sm absolute left-0 right-0 top-20 hidden lg:static lg:block lg:w-[23%] lg:max-h-[100vh] lg:overflow-auto xl:w-[20%]">
+            <div class="flex justify-center mb-10">
+                <a href="index.html">
+                    <img src="public/img/logo/chip.png" class="w-20" alt="">
+                </a>
+            </div>
+            <ul class="pl-6">
+                <li><a href="avr-introduction.html" class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1">Introduction</a></li>
+                <li><a href="avr-pin-as-input.html" class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1">Pin As Input</a></li>
+                <li><a href="avr-pin-as-input.html" class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1">Pin As Output</a></li>
+                <li><a href="avr-lcd16x2-without-i2c.html" class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1">LCD16x2 Without I2C</a></li>
+                <li><a href="avr-adc-lcd16x2.html" class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1">ADC LCD16x2</a></li>
+                
+                
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+                <li><span class="w-max tracking-wide mb-4 py-1 block transition duration-200 hover:translate-x-1 cursor-pointer line-through">This Is An Example</span></li>
+            </ul>
+        </div>
+        <!-- sidebar -->
+
+
+        <div class="pt-8 pb-10 h-screen px-4 w-full lg:w-[77%] lg:overflow-scroll lg:px-10 xl:w-[80%] xl:px-20">
+            <!-- search -->
+            <section>
+                <form class="grid grid-cols-[8fr,1fr] sm:grid-cols-[15fr,1fr] md:grid-cols-[20fr,1fr] items-center border-b border-b-slate-500">
+                    <input id="search" type="text" placeholder="Search Project / MCU" class="h-10 px-3 border-none outline-none bg-transparent" autocomplete="off">
+                    <span class="cursor-pointer lg:hidden"><i class="fa-solid fa-bars fa-lg"></i></span>
+                </form>
+            </section>
+            <!-- search -->
+    
+    
+            <!-- content -->
+            <section class="text-2xl font-bold mt-14 lg:text-3xl">
+                <h1 class="tracking-wide">AVR : Pin As Output</h1>
+            </section>
+            
+            
+            
+            <section class="mt-10 text-base font-semibold pl-3 lg:text-lg">
+                <ul>
+                    <li class="mb-3">
+                        <a href="#circuit" class="block w-max"><span class="text-blue-700 text-xl font-bold">#</span> Circuit</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#structur-folder" class="block w-max"><span class="text-blue-700 text-xl font-bold">#</span> Structur Folder</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#code" class="block w-max"><span class="text-blue-700 text-xl font-bold">#</span> Code</a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="#simulation" class="block w-max"><span class="text-blue-700 text-xl font-bold">#</span> Simulation</a>
+                    </li>
+                    <li>
+                        <a href="#download-project" class="block w-max"><span class="text-blue-700 text-xl font-bold">#</span> Download Project</a>
+                    </li>
+                </ul>
+            </section>
+            
+            
+            
+            <section id="circuit" class="font-normal text-base mt-10">
+                <a href="#circuit" class="font-bold text-2xl lg:text-3xl"><span class="text-blue-700 text-2xl font-bold">#</span> Circuit</a>
+                <img class="border border-slate-300 rounded-md shadow-md mt-5" src="public/img/avr/pin-as-output/circuit.jpg" alt="">
+                <p class="mt-5 tracking-wide">Saya membuat rangkaian ini di proteus menggunakan ic ATMEGA8 (1), Resistor 220 Ohm (3), Dan Led Red (3). Jika anda tidak punya Resistor 220 Ohm, anda bisa menggunakan dari rentang 220 Ohm - 1k Ohm.</p>
+            </section>
+            
+            
+            
+            <section id="structur-folder" class="font-normal text-base mt-12">
+                <a href="#structur-folder" class="font-bold text-2xl lg:text-3xl"><span class="text-blue-700 text-2xl font-bold">#</span> Structur Folder</a>
+                <img class="border border-slate-300 rounded-md shadow-md mt-5" src="public/img/avr/pin-as-output/structur-folder.jpg" alt="">
+                <p class="mt-5 tracking-wide">Saya tidak mengubah ubah struktur foldernya, ini adalah struktur default ketika project dibuat.</p>
+            </section>
+            
+            
+            
+            <section id="code" class="mt-12">
+                <a href="#code" class="font-bold text-2xl lg:text-3xl"><span class="text-blue-700 text-2xl font-bold">#</span> Code</a>
+                <div class="code-container mx-auto bg-atmel-primary border border-slate-300 shadow-md rounded-md mt-5">
+                    <div class="copy-container flex justify-between items-center border-b border-b-slate-300 relative">
+                        <textarea class="absolute w-[1px] h-[1px] -z-10 bg-transparent">
+#include &lt;avr/io.h&gt;
+#include &lt;util/delay.h&gt;
+    
+int main (void)
+{
+    // Make only PB0 as output
+    // DDRB |= 1 << 0;
+    // DDRB  = DDRB | 1 << 0;
+    // DDRB  = 00000000 | 00000001;
+    // DDRB  = 00000001;
+    DDRB |= 1 << 0;
+    
+    // Make only PC0 and PC1 as output
+    // DDRC |= 1 << 0 | 1 << 1;
+    // DDRC  = DDRC | 1 << 0 | 1 << 1;
+    // DDRC  = 00000000 | 00000001 | 00000010;
+    // DDRC  = 00000011;
+    DDRC |= 1 << 0 | 1 << 1;
+    
+    while (1)
+    {
+        // Write Logic High only at PB0
+        // PORTB |= 1 << 0;
+        // PORTB  = PORTB | 1 << 0;
+        // PORTB  = 00000000 | 00000001;
+        // PORTB  = 00000001;
+        PORTB |= 1 << 0;
+    
+        // Write logic high only on PC0 and PC1
+        // PORTC |= 1 << 0 | 1 << 1;
+        // PORTC  = PORTC | 1 << 0 | 1 << 1;
+        // PORTB  = 00000000 | 00000001;
+        // PORTC  = 00000000 | 00000001 | 00000010;
+        // PORTC  = 00000011;
+        PORTC |= 1 << 0 | 1 << 1;
+    
+        // Wait for 500 ms
+        _delay_ms(500);
+    
+        // Write Low Logic Only at PB0
+        // PORTB &= ~(1 << 0);
+        // PORTB  = PORTB & ~(00000001);
+        // PORTB  = 00000001 & 111111110;
+        // PORTB  = 00000000;
+        PORTB &= ~(1 << 0);
+    
+        // Write Low Logic Only on PC0 and PC1
+        // PORTC &= ~(1 << 0 | 1 << 1);
+        // PORTC  = PORTC & ~(00000001 | 00000010);
+        // PORTC  = 00000011 & ~(00000011);
+        // PORTC  = 00000011 & 11111100;
+        // PORTC  = 00000000;
+        PORTC &= ~(1 << 0 | 1 << 1);
+    
+        // Wait for 500 ms
+        _delay_ms(500);
+    }
+}
+                        </textarea>
+                        <span class="border-r border-r-slate-300 rounded-sm px-4 py-1 shadow-2xl">main.c</span>
+                        <i class="fa-solid fa-clipboard text-slate-600 cursor-pointer hover:text-slate-500 mr-2"></i>
+                    </div>
+                    <div class="overflow-auto font-medium p-3 text-sm lg:text-base">
+                        <code class="text-code-black">
+                            <div class="w-max">
+                                <span class="text-code-blue">#include</span> &lt;avr/io.h&gt;
+                            </div>
+                            <div class="w-max">
+                                <span class="text-code-blue">#include</span> &lt;util/delay.h&gt;
+                            </div>
+                            <div class="w-max">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="w-max">
+                                <span class="text-code-blue">int</span> <span class="text-code-coklat">main</span> (<span class="text-code-blue">void</span>)
+                            </div>
+                            <div class="w-max">
+                                {
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// Make only PB0 as output</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// DDRB |= 1 << 0;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// DDRB&nbsp; = DDRB | 1 << 0;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// DDRB&nbsp; = 00000000 | 00000001;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// DDRB&nbsp; = 00000001;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-purple">DDRB</span> |= 1 &lt;&lt; 0;
+                            </div>
+                            <div class="w-max">
+                                &nbsp;
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// Make only PC0 and PC1 as output</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// DDRC |= 1 << 0 | 1 << 1;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// DDRC&nbsp; = DDRC | 1 << 0 | 1 << 1;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// DDRC&nbsp; = 00000000 | 00000001 | 00000010;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-green">// DDRC&nbsp; = 00000011;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-purple">DDRC</span> |= 1 &lt;&lt; 0 | 1 &lt;&lt; 1;
+                            </div>
+                            <div class="w-max">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span class="text-code-blue">while</span> (1)
+                            </div>
+                            <div class="pl-8 w-max">
+                                <span>{</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// Write Logic High only at PB0</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB |= 1 << 0;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB&nbsp; = PORTB | 1 << 0;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB&nbsp; = 00000000 | 00000001;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB&nbsp; = 00000001;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-purple">PORTB</span> |= 1 &lt;&lt; 0;
+                            </div>
+                            <div class="w-max">
+                                &nbsp;
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// Write logic high only on PC0 and PC1</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC |= 1 << 0 | 1 << 1;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC&nbsp;  = PORTC | 1 << 0 | 1 << 1;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB&nbsp; = 00000000 | 00000001;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC&nbsp;  = 00000000 | 00000001 | 00000010;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC&nbsp;  = 00000011;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-purple">PORTC</span> |= 1 &lt;&lt; 0 | 1 &lt;&lt; 1;
+                            </div>
+                            <div class="w-max">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// Wait for 500 ms</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-coklat">_delay_ms</span>(500);
+                            </div>
+                            <div class="w-max">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// Write Low Logic Only at PB0</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB &= ~(1 << 0);</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB&nbsp;  = PORTB & ~(00000001);</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB&nbsp;  = 00000001 & 111111110;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTB&nbsp;  = 00000000;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-purple">PORTB</span> &= ~(1 &lt;&lt; 0);
+                            </div>
+                            <div class="w-max">
+                                &nbsp;
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// Write Low Logic Only on PC0 and PC1</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC &= ~(1 << 0 | 1 << 1);</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC&nbsp;  = PORTC & ~(00000001 | 00000010);</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC&nbsp;  = 00000011 & ~(00000011);</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC&nbsp;  = 00000011 & 11111100;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// PORTC&nbsp;  = 00000000;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-purple">PORTC</span> &= ~(1 &lt;&lt; 0 | 1 &lt;&lt; 1);
+                            </div>
+                            <div class="w-max">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-green">// Wait for 500 ms</span>
+                            </div>
+                            <div class="pl-16 w-max">
+                                <span class="text-code-coklat">_delay_ms</span>(500);
+                            </div>
+                            <div class="pl-8 w-max">
+                                }
+                            </div>
+                            <div class="w-max">
+                                }
+                            </div>
+                        </code>
+                    </div>
+                </div>
+            </section>
+            
+            
+            
+            
+            <section class="mt-12" id="simulation">
+                <a href="#simulation" class="font-bold text-2xl lg:text-3xl"><span class="text-blue-700 text-2xl font-bold">#</span> Simulation</a>
+                <div class="video-container rounded-md overflow-hidden shadow-md mt-5">
+                    <iframe class="w-full h-[300px] lg:h-[400px] xl:h-[500px]" src="https://www.youtube.com/embed/_ik6RkE4csA?si=l2N3NObXm4-KrxyS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            
+            
+            <section id="download-project" class="font-normal text-base mt-12">
+                <a href="#download-project" class="font-bold text-2xl lg:text-3xl"><span class="text-blue-700 text-2xl font-bold">#</span> Download Project</a>
+                <p class="mt-5 tracking-wide">Jika anda ingin mendownload project untuk code dan simulasi nya, anda bisa mengunjungi github saya <a href="https://github.com/Feyfa/atmega8-pin-as-output" target="_blank" class="underline text-blue-900 italic">klik disini</a></p>
+            </section>
+            
+            
+            
+            
+            <script src="public/js/index.js"></script>
+            <!-- content -->
+        </div>
+    </main>
+
+    <script src="public/js/blog.js"></script>
+</body>
+</html>
